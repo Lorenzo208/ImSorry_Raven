@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2family=Kdam+Thmor+Pro&display=swap');
+
+* {
+    transition: 0.5s;
+}
+
+body {
+    background-color: #101010;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    div,
+    p {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    p {
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        font-weight: 400;
+    }
+
+    div.bodyShadow {
+        position: absolute;
+        height: 220%;
+        width: 100vw;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    div.bodyImg {
+        background-image: url("Assets/ZodiacPattern.jpg");
+        background-repeat: repeat;
+        z-index: -1;
+        opacity: 0.2;
+    }
+
+    div.bodyBGS {
+        z-index: -2;
+        box-shadow: inset 0 0 10px 0.2px #fff;
+
+    }
+
+    p.mainText {
+        position: relative;
+        font-size: 3vw;
+        font-weight: 700;
+        top: 5vh;
+        color: #fff;
+        text-align: center;
+        text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #800080,
+            0 0 82px #800080,
+            0 0 92px #800080,
+            0 0 102px #800080,
+            0 0 151px #800080;
+    }
+
+    div.letterContainer {
+        display: none;
+        position: relative;
+        height: auto;
+        width: 80vw;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(20, 20, 20, 0.2);
+        border: 2px solid #fff;
+        border-radius: 10px;
+        margin-top: 10vh;
+
+        div.letterBox {
+            margin: 2%;
+
+            p.letterText {
+                color: #fff;
+                font-size: 1.2vw;
+                line-height: 150%;
+
+                b {
+                    font-size: 1.5vw;
+                }
+            }
+
+            p.footNote {
+                color: whitesmoke;
+                right: 0;
+                text-align: right;
+                line-height: 150%;
+                font-size: 1.5vw;
+            }
+
+            p.centerText {
+                font-size: 1.5vw;
+                text-align: center;
+                line-height: 150%;
+            }
+
+            p.quoteLetter {
+                color: antiquewhite;
+                font-style: italic;
+            }
+
+            p.reconcileQuestion {
+                color: cornsilk;
+                text-transform: capitalize;
+                font-weight: 700;
+            }
+
+
+            p.letterSubject {
+                font-weight: 700;
+            }
+        }
+
+        button.readMore {
+            display: block;
+            border-radius: 0 10px 10px 0;
+            position: absolute;
+            height: 100%;
+            width: auto;
+            background-color: transparent;
+            top: 0;
+            border: none;
+            outline: none;
+            right: 0;
+            cursor: pointer;
+
+            p.readMore {
+                color: #fff;
+                font-weight: 700;
+                font-size: 2vw;
+                right: 10%;
+            }
+        }
+
+        button.readMore:hover > p.readMore {
+            font-size: 2.5vw;
+        }
+    }
+
+    div.mainLetter {
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-duration: 2s;
+    }
+
+    div.firstContainer {
+        display: block !important;
+        margin-top: 15vh !important;
+    }
+}
+
+@keyframes mainLetterAnim {
+    0% {
+        display: none;
+        margin-top: 5vh;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+    }
+
+    100% {
+        margin-top: 10vh;
+        opacity: 1 !important;
+    }
+}
+
+.mainLetterAnim {
+    animation-name: mainLetterAnim;
+}
+
+.visibleY {
+    overflow-y: scroll !important;
+}
+
+
+/* font-family: 'Kdam Thmor Pro', sans-serif; 
+   font-weight: 400, 700;
+*/
